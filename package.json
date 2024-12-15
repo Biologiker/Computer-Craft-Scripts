@@ -1,0 +1,16 @@
+{
+  "name": "computer-craft-scripts",
+  "version": "1.0.0",
+  "main": "bundler/main.js",
+  "scripts": {
+    "start": "npx tsc bundler/*.ts && node ."
+  },
+  "author": "Biologiker",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.10.2",
+    "luabundle": "^1.7.0",
+    "typescript": "^5.7.2"
+  }
+}
