@@ -40,3 +40,4 @@ jobs:
           files: | 
             ./artifacts/*
             ./artifacts/*/*
+            ./artifacts/*/*/*
