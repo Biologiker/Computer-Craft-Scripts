@@ -21,6 +21,8 @@ jobs:
             name: artifacts
             path: |
               *
+              */*
+              */*/*
 
   create_release_draft:
     needs: [ get_version, bundle ]
