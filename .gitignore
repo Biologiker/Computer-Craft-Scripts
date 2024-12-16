@@ -185,6 +185,6 @@ dist
 
 *.js
 
-bundler/bundles
+bundler/bundles/*
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Lua,Node,Linux,VisualStudioCode
