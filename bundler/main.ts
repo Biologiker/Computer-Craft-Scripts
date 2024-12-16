@@ -1,4 +1,4 @@
-import { access, exists, lstat, lstatSync, readdirSync, readFile, readFileSync, stat, statfs, Stats, statSync, writeFile } from 'fs';
+import { access, exists, existsSync, lstat, lstatSync, mkdirSync, readdirSync, readFile, readFileSync, stat, statfs, Stats, statSync, writeFile, writeFileSync } from 'fs';
 import { bundle } from 'luabundle';
 
 const basePath = process.argv[1];
@@ -45,5 +45,9 @@ projects.forEach((project) => {
 
     const projectName:string = config['projectName'] ?? baseConfig['projectName'];
 
-    writeFile(`${basePath}/bundler/bundles/${projectName}.lua`, bundledLua, (e) => {console.log(e)})
+    if (!existsSync(`${basePath}/bundler/bundles`)){
+        mkdirSync(`${basePath}/bundler/bundles`);
+    }
+
+    writeFileSync(`${basePath}/bundler/bundles/${projectName}.lua`, bundledLua)
 })
