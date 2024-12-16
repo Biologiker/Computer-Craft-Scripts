@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is publishing and bundling Lua scripts
 on: [workflow_dispatch]
 jobs:
   get_version:
-    uses: ./.github/workflows/get-version.yml
+    uses: ./.github/workflows/get_version.yml
 
   bundle:
     name: Bundle Scripts
