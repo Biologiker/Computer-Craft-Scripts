@@ -1,5 +1,7 @@
 {
     "Lua.diagnostics.globals": [
-        "shell"
+        "shell",
+        "peripheral",
+        "rednet"
     ]
 }

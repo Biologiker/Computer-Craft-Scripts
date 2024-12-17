@@ -1,6 +1,6 @@
 {
     "main": "main.lua",
-    "paths": ["?.lua"],
+    "paths": ["?.lua", "lib/?.lua"],
     "force": false,
     "rootModuleName": "__root",
     "ignoredModuleNames": [],

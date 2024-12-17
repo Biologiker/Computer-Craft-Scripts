@@ -1,7 +1,15 @@
-local mylib = require("myLib")
+local warehouseLib = require("warehouseLib")
+local warehouseLib = require("monitorUtils")
 
-mylib.hello("wdw")
+local hostname = "New Myndelslöh"
+local channel = "RSWarehouse-Myndelslöh"
+local password = "adminJesus"
 
-print('test')
+local scanInterval = 1
+local use24HourFormat = true
 
-local test = 1
+-- mylib.hello("wdw")
+
+-- print('test')
+
+-- local test = 1
