@@ -1,6 +1,6 @@
 name: Publish and bundle Lua scripts
 run-name: ${{ github.actor }} is publishing and bundling Lua scripts
-on: [workflow_dispatch]
+on: [workflow_dispatch, push]
 jobs:
   get_version:
     uses: ./.github/workflows/get_version.yml
