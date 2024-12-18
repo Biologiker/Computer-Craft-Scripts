@@ -1,0 +1,9 @@
+{
+    "main": "main.lua",
+    "paths": ["?.lua", "lib/?.lua", "programs/?.lua"],
+    "force": false,
+    "rootModuleName": "__root",
+    "ignoredModuleNames": [],
+    "relativeBaseDirectoryPath": "../",
+    "projectName": "BuildHelper"
+}
