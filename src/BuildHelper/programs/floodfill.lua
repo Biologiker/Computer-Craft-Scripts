@@ -24,7 +24,7 @@ function Start(args)
     for i = 1, x do
         local has_block, data = turtle.inspect()
         
-        if !has_block then
+        if has_block then
             print('Has block')
 
             print(textutils.serialise(data))
