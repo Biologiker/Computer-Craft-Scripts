@@ -1,0 +1,6 @@
+{
+    "authorization": "<Authorization key from 'https://github.com/settings/tokens/new' with atleast the scope 'repo' to access all releases. Example: ghp_xxxx>",
+    "repo": "<repoUser>/<repoName>", 
+    "startupMethods": ["getReleaseAssets", "executeFiles"],
+    "filesToExecute": []
+}

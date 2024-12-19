@@ -4,6 +4,8 @@
         "peripheral",
         "rednet",
         "turtle",
-        "textutils"
+        "textutils",
+        "fs",
+        "http"
     ]
 }
