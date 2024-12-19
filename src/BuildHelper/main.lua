@@ -1,5 +1,3 @@
-local args = { ... }
-
 if #args < 1  then
     print('Please specify a program to run!')
 

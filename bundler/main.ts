@@ -35,7 +35,7 @@ projects.forEach((project) => {
     let paths:Array<string> = config['paths'] ?? baseConfig['paths'];
     paths = paths.map((path) => {return `${baseProjectPath}${path}`})
 
-    const bundledLua = bundle(mainPath, {
+    let bundledLua = bundle(mainPath, {
         paths,
         expressionHandler: (module, expression) => {
             const start = expression.loc!.start;
@@ -48,6 +48,8 @@ projects.forEach((project) => {
     if (!existsSync(`${basePath}/bundler/bundles`)){
         mkdirSync(`${basePath}/bundler/bundles`);
     }
+
+    bundledLua = `local args = {...} ${bundledLua}`
 
     writeFileSync(`${basePath}/bundler/bundles/${projectName}.lua`, bundledLua)
 })
