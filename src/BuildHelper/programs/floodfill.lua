@@ -8,7 +8,7 @@ function floodfill.Start(args)
         return;
     end
 
-    if args[2].lower() == 'help' or args[2].lower() == 'info' then
+    if string.lower(args[2]) == 'help' or string.lower(args[2]) == 'info' then
         helpPages.FloodFillHelp()
 
         return;
