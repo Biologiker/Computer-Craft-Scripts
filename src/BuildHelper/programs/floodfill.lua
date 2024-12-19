@@ -1,6 +1,7 @@
+local floodfill = {}
 local helpPages = require('helpPages')
 
-function Start(args)
+function floodfill.Start(args)
     if #args <= 2 then
         print('Please specify a Z coordinate relative to the turtle as a starting height!')
 
@@ -37,3 +38,5 @@ function Start(args)
         -- turtle.placeDown()
     end
 end
+
+return floodfill

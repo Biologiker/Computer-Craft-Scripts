@@ -6,7 +6,7 @@ end
 
 local programType = args[1]
 
-if programType.lower() == 'floodfill' then
+if string.lower(programType) == 'floodfill' then
     local floodfill = require('floodfill')
 
     floodfill.Start(args);
