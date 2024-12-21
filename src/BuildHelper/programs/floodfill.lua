@@ -33,7 +33,7 @@ function floodfill.Start(args)
         local hasBlockInfront, data = turtle.inspect()
         print (hasBlockInfront)
 
-        if xIterator == x then
+        if xIterator <= x then
             turtle.turnRight()
 
             local hasBlockToRight, data = turtle.inspect()
@@ -42,7 +42,7 @@ function floodfill.Start(args)
                 table.insert(freeBlocksToRight, xIterator)
             end
 
-            if hasBlockInfront == false then
+            if hasBlockInfront == false or xIterator == x then
                 return
             end
 
