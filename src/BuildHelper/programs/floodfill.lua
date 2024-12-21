@@ -50,14 +50,19 @@ function floodfill.Start(args)
                 if (hasBlockToRight and #freeBlocksToRight == 0) or hasBlockToRight == false then
                     turtle.turnRight()
                     hasBlockToRight = turtle.inspect()
-                    turtle.turnRight()
 
-                    table.insert(placedBlocks, { xCoordinate, yIterator })
-
-                    turtle.place()
-
-                    turtle.turnRight()
-                    turtle.turnRight()
+                    if hasBlockToRight then
+                        turtle.turnLeft()
+                    else
+                        turtle.turnRight()
+    
+                        table.insert(placedBlocks, { xCoordinate, yIterator })
+    
+                        turtle.place()
+    
+                        turtle.turnRight()
+                        turtle.turnRight()
+                    end
                 else
                     turtle.turnRight()
 
