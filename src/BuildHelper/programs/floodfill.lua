@@ -60,14 +60,16 @@ function floodfill.Start(args)
 
             turtle.turnRight()
             turtle.turnRight()
-
-            print('freeBlocksToRight')
-            print(#freeBlocksToRight)
-            print(textutils.serialize(freeBlocksToRight))
         else
             break
         end
+
+        xIterator = xIterator + 1
     end
+
+    print('freeBlocksToRight')
+    print(#freeBlocksToRight)
+    print(textutils.serialize(freeBlocksToRight))
 end
 
 return floodfill
