@@ -52,7 +52,8 @@ function floodfill.Start(args)
                     turtle.turnRight()
                     hasBlockToRight = turtle.inspect()
 
-                    local wayBackIsFree = string.find(textutils.serialize(freeBlocksToRight), x - 2)
+                    print(textutils.serialize(freeBlocksToRight))
+                    local wayBackIsFree = string.find(textutils.serialize(freeBlocksToRight), tostring(x - 2))
 
                     print(wayBackIsFree)
 
