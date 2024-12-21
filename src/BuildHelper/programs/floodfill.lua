@@ -18,9 +18,9 @@ function floodfill.Start(args)
         print('Please specify X and Y coordinates as a work region (0 would be "infinite")')
     end
 
-    local z = args[2]
-    local x = args[3]
-    local y = args[4]
+    local z = tonumber(args[2])
+    local x = tonumber(args[3])
+    local y = tonumber(args[4])
 
     local placedBlocks = {}
 
