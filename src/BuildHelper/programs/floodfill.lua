@@ -22,15 +22,19 @@ function floodfill.Start(args)
     local x = args[3]
     local y = args[4]
 
-    local freeSides = {}
+    local placedBlocks = {}
 
-    for i = 1, x do
+    local yIterator = 1 --for y...
+
+    local freeBlocks = {}
+
+    for xIterator = 1, x - 1 do
         turtle.turnRight()
 
         local hasBlock, data = turtle.inspect()
 
         if hasBlock == false then
-            table.insert(freeSides, i)
+            table.insert(freeBlocks, {xIterator, yIterator})
         end
 
         turtle.turnLeft()
@@ -39,27 +43,22 @@ function floodfill.Start(args)
         turtle.turnRight()
         turtle.turnRight()
 
-        if hasBlock and #freeSides == 0 then
+        if hasBlock and #freeBlocks == 0 then
+            table.insert(placedBlocks, {xIterator, yIterator})
+
            turtle.place()
         end
 
         turtle.turnRight()
         turtle.turnRight()
-
-        -- local has_block, data = turtle.inspect()
-        
-        -- if has_block then
-        --     print('Has block')
-
-        --     print(textutils.serialise(data))
-        -- else
-        --     print('Doesnt have Block')
-
-        --     print(textutils.serialise(data))
-        -- end
-
-        -- turtle.placeDown()
     end
+
+    print ('freeBlocks')
+    print (#freeBlocks)
+    print (textutils.serialize(freeBlocks))
+    print ('placedBlocks')
+    print (#placedBlocks)
+    print (textutils.serialize(placedBlocks))
 end
 
 return floodfill
