@@ -7,6 +7,7 @@
         "textutils",
         "fs",
         "http",
-        "args"
+        "args",
+        "multishell"
     ]
 }

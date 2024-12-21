@@ -6,7 +6,8 @@ function executeFiles.Start(config)
     for i = 1, #filesToExecute do
         print('Executing: ' .. filesToExecute[i])
 
-        shell.run(filesToExecute[i])
+        -- shell.run()
+        local id = multishell.launch({}, filesToExecute[i])
     end
 end
 
