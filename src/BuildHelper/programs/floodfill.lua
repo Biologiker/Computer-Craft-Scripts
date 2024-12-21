@@ -70,6 +70,10 @@ function floodfill.Start(args)
 
                 xIterator = 0
 
+                print('freeBlocksToRight')
+                print(#freeBlocksToRight)
+                print(textutils.serialize(freeBlocksToRight))
+                
                 goto continue
             end
         else
@@ -79,10 +83,6 @@ function floodfill.Start(args)
         xIterator = xIterator + 1
         ::continue::
     end
-
-    print('freeBlocksToRight')
-    print(#freeBlocksToRight)
-    print(textutils.serialize(freeBlocksToRight))
 end
 
 return floodfill
