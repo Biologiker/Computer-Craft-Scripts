@@ -42,7 +42,7 @@ function floodfill.Start(args)
                 table.insert(freeBlocksToRight, xIterator)
             end
 
-            if hasBlockInfront == false or xIterator < x then
+            if hasBlockInfront == false and xIterator < x then
                 turtle.turnLeft()
                 turtle.forward()
 
