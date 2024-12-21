@@ -46,12 +46,13 @@ function floodfill.Start(args)
 
             if hasBlockInfront == false and xCoordinate < x then
                 turtle.forward()
+                local lastBlockHasBlockToRight = hasBlockToRight
 
                 if (hasBlockToRight and #freeBlocksToRight == 0) or hasBlockToRight == false then
                     turtle.turnRight()
                     hasBlockToRight = turtle.inspect()
 
-                    if hasBlockToRight then
+                    if hasBlockToRight and lastBlockHasBlockToRight == false then
                         turtle.turnLeft()
                     else
                         turtle.turnRight()
